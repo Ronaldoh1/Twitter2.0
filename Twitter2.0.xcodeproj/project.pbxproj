@@ -12,6 +12,7 @@
 		F27AFA101E2DEC72000433B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27AFA0E1E2DEC72000433B2 /* LaunchScreen.storyboard */; };
 		F27AFA1B1E2DEC72000433B2 /* Twitter2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AFA1A1E2DEC72000433B2 /* Twitter2_0Tests.swift */; };
 		F27AFA261E2DEEB4000433B2 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AFA251E2DEEB4000433B2 /* HomeController.swift */; };
+		F27AFA281E2DF2C9000433B2 /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AFA271E2DF2C9000433B2 /* WordCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		F27AFA1A1E2DEC72000433B2 /* Twitter2_0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twitter2_0Tests.swift; sourceTree = "<group>"; };
 		F27AFA1C1E2DEC72000433B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F27AFA251E2DEEB4000433B2 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		F27AFA271E2DF2C9000433B2 /* WordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +77,10 @@
 		F27AFA041E2DEC72000433B2 /* Twitter2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				F27AFA2B1E2DF2DB000433B2 /* Controller */,
+				F27AFA2A1E2DF2D5000433B2 /* View */,
+				F27AFA291E2DF2D0000433B2 /* Model */,
 				F27AFA051E2DEC72000433B2 /* AppDelegate.swift */,
-				F27AFA251E2DEEB4000433B2 /* HomeController.swift */,
 				F27AFA0C1E2DEC72000433B2 /* Assets.xcassets */,
 				F27AFA0E1E2DEC72000433B2 /* LaunchScreen.storyboard */,
 				F27AFA111E2DEC72000433B2 /* Info.plist */,
@@ -91,6 +95,29 @@
 				F27AFA1C1E2DEC72000433B2 /* Info.plist */,
 			);
 			path = Twitter2.0Tests;
+			sourceTree = "<group>";
+		};
+		F27AFA291E2DF2D0000433B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F27AFA2A1E2DF2D5000433B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F27AFA271E2DF2C9000433B2 /* WordCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F27AFA2B1E2DF2DB000433B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F27AFA251E2DEEB4000433B2 /* HomeController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F27AFA281E2DF2C9000433B2 /* WordCell.swift in Sources */,
 				F27AFA061E2DEC72000433B2 /* AppDelegate.swift in Sources */,
 				F27AFA261E2DEEB4000433B2 /* HomeController.swift in Sources */,
 			);
