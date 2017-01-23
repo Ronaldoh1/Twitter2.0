@@ -12,7 +12,13 @@ class UserCell: DatasourceCell {
 
     override var datasourceItem: Any? {
         didSet {
-           // nameLabel.text = datasourceItem as? String
+            guard let user = datasourceItem as? User else {
+                return
+            }
+           nameLabel.text = user.name
+           usernameLabel.text = user.username
+           bioTextView.text = user.bioText
+           profileImage.image = user.profileImage
         }
     }
 
@@ -20,20 +26,17 @@ class UserCell: DatasourceCell {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 5
         imageView.layer.masksToBounds = true
-        imageView.image = #imageLiteral(resourceName: "profileImage")
         return imageView
     }()
 
   fileprivate let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Ronald Hernandez"
         label.font = UIFont.boldSystemFont(ofSize: 16)
         return label
     }()
 
    fileprivate let usernameLabel: UILabel = {
         let label = UILabel()
-        label.text = "@Ronaldoh1"
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = UIColor(r: 130, g: 130, b: 130)
         return label
@@ -41,7 +44,6 @@ class UserCell: DatasourceCell {
 
    fileprivate let bioTextView: UITextView = {
         let textView = UITextView()
-        textView.text = "Ronald is iOS Developer. He is currently working on learning advanced Swift. He's very excided about iOS Development. He is also a big fan of Dragonball Super. He also likes all of Biden Memes!"
         textView.font = UIFont.systemFont(ofSize: 15)
         textView.backgroundColor = .clear
         return textView
@@ -64,6 +66,9 @@ class UserCell: DatasourceCell {
 
     override func setupViews() {
         super.setupViews()
+
+        separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
 
         addSubview(profileImage)
         addSubview(nameLabel)

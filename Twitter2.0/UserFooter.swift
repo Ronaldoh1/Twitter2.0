@@ -24,4 +24,5 @@ class UserFooter: DatasourceCell {
         addSubview(textLabel)
         textLabel.anchor(self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     }
+    
 }
