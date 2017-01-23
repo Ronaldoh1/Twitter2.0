@@ -10,7 +10,7 @@ import UIKit
 
 class WordCell: UICollectionViewCell {
 
-    let wordLabel: UILabel = {
+   private let wordLabel: UILabel = {
         let label = UILabel()
         label.text = "Test Test Test"
         label.translatesAutoresizingMaskIntoConstraints = false

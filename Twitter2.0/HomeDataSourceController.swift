@@ -13,7 +13,6 @@ class HomeDataSourceController: DatasourceController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-     
 
         let homeDataSource = HomeDataSource()
         self.datasource = homeDataSource
