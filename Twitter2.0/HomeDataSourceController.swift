@@ -17,6 +17,9 @@ class HomeDataSourceController: DatasourceController {
         let homeDataSource = HomeDataSource()
         self.datasource = homeDataSource
         setupNavigationBarItems()
+
+        collectionView?.backgroundColor = UIColor(r: 232, g: 236, b: 241)
+        
     }
 
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -39,11 +42,22 @@ class HomeDataSourceController: DatasourceController {
 
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+
+        if section == 1 {
+          return CGSize.zero
+        }
+
         return CGSize(width: view.frame.width, height: 50)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+
+        if section == 1 {
+            return CGSize.zero
+        }
+
         return CGSize(width: view.frame.width, height: 50)
     }
+
     
 }

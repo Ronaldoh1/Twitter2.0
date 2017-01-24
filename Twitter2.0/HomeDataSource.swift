@@ -38,4 +38,8 @@ class HomeDataSource: Datasource {
         return [UserFooter.self]
     }
 
+    override func numberOfSections() -> Int {
+        return 2
+    }
+
 }
