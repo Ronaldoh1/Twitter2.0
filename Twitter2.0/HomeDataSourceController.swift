@@ -56,7 +56,7 @@ class HomeDataSourceController: DatasourceController {
             return CGSize.zero
         }
 
-        return CGSize(width: view.frame.width, height: 50)
+        return CGSize(width: view.frame.width, height: 64)
     }
 
     

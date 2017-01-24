@@ -21,6 +21,7 @@
 		F287C30A1E35A76A0035472F /* UserFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287C3091E35A76A0035472F /* UserFooter.swift */; };
 		F287C30C1E36838D0035472F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287C30B1E36838D0035472F /* User.swift */; };
 		F2FD68FE1E37AEDF00C74721 /* HomeDataSourceController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FD68FD1E37AEDF00C74721 /* HomeDataSourceController+NavigationBar.swift */; };
+		F2FD69001E37B94B00C74721 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FD68FF1E37B94B00C74721 /* TweetCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		F287C3091E35A76A0035472F /* UserFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFooter.swift; sourceTree = "<group>"; };
 		F287C30B1E36838D0035472F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F2FD68FD1E37AEDF00C74721 /* HomeDataSourceController+NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeDataSourceController+NavigationBar.swift"; sourceTree = "<group>"; };
+		F2FD68FF1E37B94B00C74721 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		F90832806E58A6803C1A65C2 /* Pods-Twitter2.0Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter2.0Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twitter2.0Tests/Pods-Twitter2.0Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB095D278150D9C1B5599D48 /* Pods_Twitter2_0Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitter2_0Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -157,6 +159,7 @@
 				F287C3051E35A3720035472F /* UserCell.swift */,
 				F287C3071E35A5E30035472F /* UserHeader.swift */,
 				F287C3091E35A76A0035472F /* UserFooter.swift */,
+				F2FD68FF1E37B94B00C74721 /* TweetCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				F2FD68FE1E37AEDF00C74721 /* HomeDataSourceController+NavigationBar.swift in Sources */,
 				F287C3061E35A3720035472F /* UserCell.swift in Sources */,
 				F287C30C1E36838D0035472F /* User.swift in Sources */,
+				F2FD69001E37B94B00C74721 /* TweetCell.swift in Sources */,
 				F287C3021E35A1680035472F /* HomeDataSourceController.swift in Sources */,
 				F27AFA061E2DEC72000433B2 /* AppDelegate.swift in Sources */,
 			);

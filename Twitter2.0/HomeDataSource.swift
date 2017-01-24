@@ -18,7 +18,14 @@ class HomeDataSource: Datasource {
         return [ronUser, rayUser, vegetaUser]
     }()
 
+    let tweets = ["Tweet1", "Tweet2"]
+
     override func numberOfItems(_ section: Int) -> Int {
+
+        if section == 1 {
+            return tweets.count
+        }
+
         return users.count
     }
 
@@ -27,7 +34,7 @@ class HomeDataSource: Datasource {
     }
 
     override func cellClasses() -> [DatasourceCell.Type] {
-        return [UserCell.self]
+        return [UserCell.self, TweetCell.self]
     }
 
     override func headerClasses() -> [DatasourceCell.Type]? {
