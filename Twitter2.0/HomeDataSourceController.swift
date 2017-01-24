@@ -11,12 +11,12 @@ import LBTAComponents
 
 class HomeDataSourceController: DatasourceController {
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let homeDataSource = HomeDataSource()
         self.datasource = homeDataSource
+        setupNavigationBarItems()
     }
 
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -45,6 +45,5 @@ class HomeDataSourceController: DatasourceController {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.width, height: 50)
     }
-
-
+    
 }
