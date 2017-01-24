@@ -26,7 +26,7 @@ class HomeDataSourceController: DatasourceController {
 
             //get estimated size for the text
 
-            let approximateWidthOfBioTextView = view.frame.width - 12 - 50 - 12
+            let approximateWidthOfBioTextView = view.frame.width - 12 - 50 - 12 - 2
             let size = CGSize(width: approximateWidthOfBioTextView, height: 1000)
             let attributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 15)]
 
