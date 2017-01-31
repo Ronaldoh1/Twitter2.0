@@ -518,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C38E89A9656FF1E0AEB526FF /* Pods-Twitter2.0.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Twitter2.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -532,6 +533,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4DFBC7896B87D05E2BA44E4E /* Pods-Twitter2.0.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Twitter2.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
