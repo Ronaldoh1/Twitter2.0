@@ -19,7 +19,6 @@ struct Service {
 
         let request: APIRequest<HomeDataSource, JSONError> = tron.request("twitter/home")
         request.perform(withSuccess: { (homeDatasource) in
-            print(homeDatasource.users.count)
             completion(homeDatasource)
         }) { (error) in
             print("Failed to fetch json", error)

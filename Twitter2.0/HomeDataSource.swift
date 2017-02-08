@@ -13,6 +13,7 @@ import SwiftyJSON
 class HomeDataSource: Datasource, JSONDecodable{
 
     let users: [User]
+    var tweets = [Tweet]()
 
     required init(json: JSON) throws {
 
@@ -20,24 +21,23 @@ class HomeDataSource: Datasource, JSONDecodable{
 
         let array = json["users"].array
         for userJson in array! {
-            let name = userJson["name"].stringValue
-            let username = userJson["username"].stringValue
-            let bio = userJson["bio"].stringValue
-
-            let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+            let user = User(json: userJson)
             users.append(user)
         }
+
+        var tweets = [Tweet]()
+
+        let tweetsJSONArray = json["tweets"].array
+        for tweetJson in tweetsJSONArray! {
+            let userJson = tweetJson["user"]
+            let user = User(json: userJson)
+            let message = tweetJson["message"].stringValue
+            let tweet = Tweet(user: user, message: message)
+            tweets.append(tweet)
+        }
         self.users = users
+        self.tweets = tweets
     }
-
-    let tweets: [Tweet] = {
-        let ronUser = User(name: "Ronald Hernandez", username: "@Ronaldoh1", bioText: "Ronald is iOS Developer. He is currently working on learning advanced Swift. He's very excided about iOS Development. He is also a big fan of Dragonball Super. He also likes all of Biden Memes!", profileImage: #imageLiteral(resourceName: "goku"))
-
-        let tweet = Tweet(user: ronUser, message: "Welcome to Episode 9 of Twitter Series. We are doing great so far. I am really liking this series")
-        let tweet2 = Tweet(user: ronUser, message: "I am really hungry. I'm going to order some chinese food and watch some dragon ball z.")
-
-        return [tweet]
-    }()
 
     override func numberOfItems(_ section: Int) -> Int {
 
