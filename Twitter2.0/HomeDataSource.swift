@@ -12,31 +12,16 @@ import SwiftyJSON
 
 class HomeDataSource: Datasource, JSONDecodable{
 
-    let users: [User]
+    var users = [User]()
     var tweets = [Tweet]()
 
     required init(json: JSON) throws {
 
-        var users = [User]()
-
-        let array = json["users"].array
-        for userJson in array! {
-            let user = User(json: userJson)
-            users.append(user)
-        }
-
-        var tweets = [Tweet]()
+        let usersJsonArray = json["users"].array
+        self.users = usersJsonArray!.map{ return User(json: $0) }
 
         let tweetsJSONArray = json["tweets"].array
-        for tweetJson in tweetsJSONArray! {
-            let userJson = tweetJson["user"]
-            let user = User(json: userJson)
-            let message = tweetJson["message"].stringValue
-            let tweet = Tweet(user: user, message: message)
-            tweets.append(tweet)
-        }
-        self.users = users
-        self.tweets = tweets
+        self.tweets = tweetsJSONArray!.map { return Tweet(json: $0) }
     }
 
     override func numberOfItems(_ section: Int) -> Int {
